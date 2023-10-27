@@ -11,7 +11,17 @@ namespace BasicThread
     {
         public static void Thread1() 
         {
-            for (int loopcount = 1; loopcount <= 5; loopcount++)
+            for (int loopcount = 0; loopcount <= 2; loopcount++)
+            {
+                Thread thread = Thread.CurrentThread;
+                Console.WriteLine("Name of Thread: " + thread.Name + " = " + loopcount);
+                Thread.Sleep(500);
+            }
+        }
+
+        public static void Thread2()
+        {
+            for (int loopcount = 0; loopcount <6; loopcount++)
             {
                 Thread thread = Thread.CurrentThread;
                 Console.WriteLine("Name of Thread: " + thread.Name + " = " + loopcount);
